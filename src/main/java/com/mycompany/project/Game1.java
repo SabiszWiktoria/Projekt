@@ -1,8 +1,5 @@
 package com.mycompany.project;
 
-import static com.mycompany.project.GameLevel.EASY;
-import static com.mycompany.project.GameLevel.HARD;
-import static com.mycompany.project.GameLevel.NORMAL;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,9 +7,9 @@ public class Game1 extends Game implements GameController {
 
     private final static String NAME = "Zgadywanie liczby";
     private final static String regex = "[0-9]";
-    private final static int HARD_LEVEL = 256;
-    private final static int NORMAL_LEVEL = 128;
-    private final static int EASY_LEVEL = 16;
+    private final static int HARD_LEVEL = 15;
+    private final static int NORMAL_LEVEL = 10;
+    private final static int EASY_LEVEL = 5;
     private final Scanner in = new Scanner(System.in);
     private boolean hint = false;
     private int number;

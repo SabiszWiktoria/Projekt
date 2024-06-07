@@ -1,7 +1,5 @@
 package com.mycompany.project;
 
-import java.lang.System.Logger;
-import java.util.logging.Level;
 
 public class User {
 
