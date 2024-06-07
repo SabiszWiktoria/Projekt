@@ -8,6 +8,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -16,7 +17,7 @@ import java.util.logging.Logger;
 
 public class DataBase implements DatabaseController {
 
-    private final static String path = "C:\\Users\\UserPC\\Documents\\NetBeansProjects\\Project\\src\\main\\java\\com\\mycompany\\project\\DataBase.txt";
+    private final static String path = "src\\main\\java\\com\\mycompany\\project\\DataBase.txt";
     private List<User> users;
     private final File file = new File(path);
 
@@ -91,7 +92,6 @@ public class DataBase implements DatabaseController {
     void saveToDataBase() throws IOException {
         PrintWriter writer = new PrintWriter(file);
         for (User u : users) {
-            System.out.println("*********" + u.getName());
             writer.println(u.prepareData());
         }
         writer.close();

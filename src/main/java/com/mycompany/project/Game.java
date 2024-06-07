@@ -63,7 +63,6 @@ public abstract class Game {
         System.out.println("NORMALNY = 10");
         System.out.println("LATWY = 5");
         System.out.println("punkty, ktore mozna wygrac lub przegrac");
-        System.out.println("Zasady");
         System.out.println("TRUDNY: " + hard);
         System.out.println("NORMALNY: " + normal);
         System.out.println("LATWY: " + easy);

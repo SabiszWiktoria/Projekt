@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Game1 extends Game implements GameController {
 
     private final static String NAME = "Zgadywanie liczby";
-
+    private final static String regex = "[0-9]";
     private final static int HARD_LEVEL = 256;
     private final static int NORMAL_LEVEL = 128;
     private final static int EASY_LEVEL = 16;
@@ -51,7 +51,7 @@ public class Game1 extends Game implements GameController {
     @Override
     public void end(User user) {
         if (hint) {
-            value = -10;
+            value -= 10;
         }
         user.changeStatistics(gameResult, value);
         System.out.println(user.toString());
@@ -68,7 +68,11 @@ public class Game1 extends Game implements GameController {
         for (int i = 0; i < 2; i++) {
             System.out.println(" Proba " + (i + 1) + ".");
             System.out.println(" Podaj liczbe:");
-            input = Integer.parseInt(in.nextLine());
+            String str = in.nextLine();
+            if (!str.matches(regex)) {
+                str = "0";
+            }
+            input = Integer.parseInt(str);
             if (input == number) {
                 return true;
             }

@@ -50,7 +50,6 @@ public class User {
 
     void changeStatistics(GameResult gameResult, int value) {
         gamesCount += 1;
-        System.out.println(" "+pointsCount+ " "+value);
         switch (gameResult) {
             case WIN ->
                 win(value);
@@ -78,7 +77,6 @@ public class User {
     boolean checkPointCount() {
         return pointsCount <= MIN_POINTS_COUNT;
     }
-    
 
     private String checkStatusUser() {
         if (checkPointCount()) {
